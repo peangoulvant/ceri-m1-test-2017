@@ -7,9 +7,16 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.mockito.Mock;
+
+import fr.univavignon.rodeo.api.IAnimal;
 
 public class IAnimalTest {
 
+	@Mock
+	protected IAnimal animal;
+	
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -28,22 +35,26 @@ public class IAnimalTest {
 
 	@Test
 	public void testGetXP() {
-		fail("Not yet implemented");
+		boolean xp = false;
+		if(animal.getXP()!=0)
+			xp = true;
+		assertTrue("", xp);
+		
 	}
 
 	@Test
 	public void testIsSecret() {
-		fail("Not yet implemented");
+		assertTrue("animal is secret", animal.isSecret());
 	}
 
 	@Test
 	public void testIsEndangered() {
-		fail("Not yet implemented");
+		assertTrue("animal is endangered", animal.isSecret());
 	}
 
 	@Test
 	public void testIsBoss() {
-		fail("Not yet implemented");
+		assertTrue("animal is the boss", animal.isBoss());
 	}
 
 }

@@ -7,9 +7,16 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.mockito.Mock;
+
+import fr.univavignon.rodeo.api.IEnvironmentProvider;
 
 public class IEnvironmentProviderTest {
-
+	
+	@Mock
+	protected IEnvironmentProvider envProv;
+	
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -28,12 +35,18 @@ public class IEnvironmentProviderTest {
 
 	@Test
 	public void testGetAvailableEnvironments() {
-		fail("Not yet implemented");
+		boolean available = false;
+		if(!envProv.getAvailableEnvironments().isEmpty())
+			available = true;
+		assertTrue("there are availables environments", available);
 	}
 
 	@Test
-	public void testGetEnvironment() {
-		fail("Not yet implemented");
+	public void testGetEnvironment(String name) {
+		boolean env = false;
+		if(envProv.getEnvironment(name)!=null)
+			env = true;
+		assertTrue("there are availables environments", env);
 	}
 
 }

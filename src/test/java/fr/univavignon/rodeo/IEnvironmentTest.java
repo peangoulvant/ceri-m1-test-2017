@@ -7,9 +7,15 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.mockito.Mock;
+
+import fr.univavignon.rodeo.api.IEnvironment;
 
 public class IEnvironmentTest {
 
+	@Mock
+	protected IEnvironment env;
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -28,12 +34,18 @@ public class IEnvironmentTest {
 
 	@Test
 	public void testGetAreas() {
-		fail("Not yet implemented");
+		boolean areas = false;
+		if(env.getAreas()!=0)
+			areas = true;
+		assertTrue("there are available areas", areas);
 	}
 
 	@Test
 	public void testGetSpecies() {
-		fail("Not yet implemented");
+		boolean species = false;
+		if(!env.getSpecies().isEmpty())
+			species = true;
+		assertTrue("there are many species", species);
 	}
 
 }
