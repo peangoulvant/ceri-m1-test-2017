@@ -7,8 +7,30 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoRule;
 
 public class IGameStateTest {
+
+	@Mock
+	protected IGameState gameState;
+
+	public void testGetProgression(){
+		boolean isProgression;
+		if(gameState.getProgression() != 0){
+			isProgression = true;
+		}
+		assertTrue("Progression exist",isProgression);
+	}
+
+	public void testGetSpecies(ISpecies species){
+		boolean testSpecies;
+		if(gameState.getSpeciesLevel(species) != 0){
+			testSpecies = true;
+		}
+		assertTrue("Species level exist",testSpecies);
+	}
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {

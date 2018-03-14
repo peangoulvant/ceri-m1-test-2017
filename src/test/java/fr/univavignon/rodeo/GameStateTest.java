@@ -1,5 +1,5 @@
 package fr.univavignon.rodeo;
 
-public class GameStateTest {
+public class GameStateTest extends IGameStateTest{
 
 }

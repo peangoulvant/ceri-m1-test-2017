@@ -1,5 +1,5 @@
 package fr.univavignon.rodeo;
 
-public class EnvironmentProvider {
+public class EnvironmentProvider extends IEnvironmentProviderTest{
 
 }

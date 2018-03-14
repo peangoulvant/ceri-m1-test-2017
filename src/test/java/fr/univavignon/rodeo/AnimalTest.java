@@ -1,5 +1,5 @@
 package fr.univavignon.rodeo;
 
-public class AnimalTest {
+public class AnimalTest extends IAnimalTest{
 
 }
