@@ -1,5 +1,5 @@
 package fr.univavignon.rodeo;
 
-public class SpecieTest {
+public class SpecieTest extends ISpecieTest{
 
 }

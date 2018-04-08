@@ -7,8 +7,24 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoRule;
+
+import fr.univavignon.rodeo.api.IGameStateProvider;
 
 public class IGameStateProviderTest {
+
+	@Mock
+	protected IGameStateProvider gameStateProvider;
+
+	public void testGetGameStateProvider(String testString){
+		boolean gameExist = false;
+		if(gameStateProvider.get(testString) != null){
+			gameExist = true;
+		}
+		assertTrue("GameStateProvider is gotten",gameExist);
+	}
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {

@@ -10,13 +10,14 @@ import org.junit.Test;
 import org.mockito.Mock;
 
 import fr.univavignon.rodeo.api.IAnimal;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoRule;
 
 public class IAnimalTest {
 
 	@Mock
 	protected IAnimal animal;
-	
-	
+
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}

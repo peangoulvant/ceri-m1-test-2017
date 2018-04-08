@@ -7,8 +7,33 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoRule;
+
+import fr.univavignon.rodeo.api.IGameState;
+import fr.univavignon.rodeo.api.ISpecie;
 
 public class IGameStateTest {
+
+	@Mock
+	protected IGameState gameState;
+
+	public void testGetProgression(){
+		boolean isProgression = false;
+		if(gameState.getProgression() != 0){
+			isProgression = true;
+		}
+		assertTrue("Progression exist",isProgression);
+	}
+
+	public void testGetSpecies(ISpecie species){
+		boolean testSpecies = false;
+		if(gameState.getSpecieLevel(species) != null){
+			testSpecies = true;
+		}
+		assertTrue("Species level exist",testSpecies);
+	}
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -38,11 +63,6 @@ public class IGameStateTest {
 
 	@Test
 	public void testGetSpecieLevel() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetProgression() {
 		fail("Not yet implemented");
 	}
 
