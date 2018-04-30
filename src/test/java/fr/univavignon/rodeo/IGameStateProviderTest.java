@@ -8,48 +8,39 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
+import fr.univavignon.rodeo.api.IGameState;
 import fr.univavignon.rodeo.api.IGameStateProvider;
 
 public class IGameStateProviderTest {
 
 	@Mock
-	protected IGameStateProvider gameStateProvider;
+	protected IGameStateProvider gameStateProvider, gameStateProviderNull;
+	protected IGameState gameState;
 
-	public void testGetGameStateProvider(String testString){
-		boolean gameExist = false;
-		if(gameStateProvider.get(testString) != null){
-			gameExist = true;
-		}
-		assertTrue("GameStateProvider is gotten",gameExist);
-	}
-
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
+	
 	@Before
 	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
+		gameStateProvider = Mockito.mock(IGameStateProvider.class);
+		gameState = Mockito.mock(IGameState.class);
+		gameStateProviderNull = Mockito.mock(IGameStateProvider.class);
+		
+		//----------------- get --------------------\\
+		Mockito.when(gameStateProvider.get("testName")).thenReturn(gameState);
+		Mockito.when(gameStateProviderNull.get(null)).thenThrow(new IllegalArgumentException());
+		
+	}	
+	
+	@Test
+	public void testGetGameStateProvider() throws IllegalArgumentException{
+		assertEquals("getGameStateProvider -- OK", gameStateProvider.get("testName"), gameState);
 	}
 
 	@Test
-	public void testSave() {
-		fail("Not yet implemented");
+	public void testGetGameStateProviderNull() throws IllegalArgumentException{
+		gameStateProviderNull.get(null);
 	}
-
-	@Test
-	public void testGet() {
-		fail("Not yet implemented");
-	}
-
 }

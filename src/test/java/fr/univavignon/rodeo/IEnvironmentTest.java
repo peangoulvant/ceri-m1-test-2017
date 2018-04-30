@@ -2,14 +2,20 @@ package fr.univavignon.rodeo;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 
 import fr.univavignon.rodeo.api.IEnvironment;
+import fr.univavignon.rodeo.api.ISpecie;
+
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
@@ -17,37 +23,36 @@ public class IEnvironmentTest {
 
 	@Mock
 	protected IEnvironment env;
-	
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
+	protected List<ISpecie> listSpecies = new ArrayList<>();
 
 	@Before
 	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
+		env = Mockito.mock(IEnvironment.class);
+		//----------------- getAreas --------------------\\
+		Mockito.when(env.getAreas()).thenReturn(3); //sands, forest and ice
+		
+		//----------------- getSpecies --------------------\\
+		//initialisation species pour 3 terrains
+		ISpecie sp1 = Mockito.mock(ISpecie.class);
+		ISpecie sp2 = Mockito.mock(ISpecie.class);
+		ISpecie sp3 = Mockito.mock(ISpecie.class);
+		
+		//on les ajoute dans la liste
+		listSpecies.add(sp1);
+		listSpecies.add(sp2);
+		listSpecies.add(sp3);
+		
+		Mockito.when(env.getSpecies()).thenReturn(listSpecies);
 	}
 
 	@Test
 	public void testGetAreas() {
-		boolean areas = false;
-		if(env.getAreas()!=0)
-			areas = true;
-		assertTrue("there are available areas", areas);
+		assertEquals("GetArears -- OK", env.getAreas(), 3);
 	}
 
 	@Test
 	public void testGetSpecies() {
-		boolean species = false;
-		if(!env.getSpecies().isEmpty())
-			species = true;
-		assertTrue("there are many species", species);
+		assertEquals("GetSpecies -- OK", env.getSpecies(), listSpecies);		
 	}
 
 }

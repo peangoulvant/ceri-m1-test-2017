@@ -2,53 +2,58 @@ package fr.univavignon.rodeo;
 
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
+import fr.univavignon.rodeo.api.IEnvironment;
 import fr.univavignon.rodeo.api.IEnvironmentProvider;
 
 public class IEnvironmentProviderTest {
 	
 	@Mock
-	protected IEnvironmentProvider envProv;
+	protected IEnvironmentProvider envProv, envProvNull;
+	protected IEnvironment env;
+	private static List<String> listEnvironnementProvider = Arrays.asList("sands","forest","ice");
 	
-	
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
 	@Before
 	public void setUp() throws Exception {
+		envProv = Mockito.mock(IEnvironmentProvider.class);
+		envProvNull = Mockito.mock(IEnvironmentProvider.class);
+		
+		//----------------- getEnvironment --------------------\\
+		Mockito.when(envProvNull.getEnvironment(null)).thenThrow(new IllegalArgumentException());
+		
+		env = Mockito.mock(IEnvironment.class);
+		
+		//----------------- getName --------------------\\
+		Mockito.when(env.getName()).thenReturn("ice");
+		
+		//----------------- getAvailableEnvironments --------------------\\
+		Mockito.when(envProv.getAvailableEnvironments()).thenReturn(listEnvironnementProvider);
+		
+		//----------------- getEnvironment --------------------\\
+		Mockito.when(envProv.getEnvironment("ice")).thenReturn(env);
 	}
 
-	@After
-	public void tearDown() throws Exception {
-	}
 
 	@Test
 	public void testGetAvailableEnvironments() {
-		boolean available = false;
-		if(!envProv.getAvailableEnvironments().isEmpty())
-			available = true;
-		assertTrue("there are availables environments", available);
+		assertEquals("GetAvailableEnvironments -- OK", envProv.getAvailableEnvironments(), listEnvironnementProvider);
 	}
 
 	@Test
-	public void testGetEnvironment(String name) {
-		boolean env = false;
-		if(envProv.getEnvironment(name)!=null)
-			env = true;
-		assertTrue("there are availables environments", env);
+	public void testGetEnvironment(String name) throws IllegalArgumentException {
+		assertEquals("GetEnvironment -- OK", envProv.getEnvironment("ice"), env);
 	}
 
 }
