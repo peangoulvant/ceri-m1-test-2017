@@ -12,7 +12,6 @@ public class NamedObject implements INamedObject {
 		this.name = name;
 	}
 	
-	
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
