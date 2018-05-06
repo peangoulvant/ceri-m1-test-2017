@@ -1,5 +1,11 @@
 # ceri-m2-test
 
+ANGOULVANT Pierre-Emmanuel
+NORSIC Loris
+
+## Badges
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6454f46054dd459b8dbf68369cf368a0)](https://www.codacy.com/app/peangoulvant/ceri-m1-test-2017?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=peangoulvant/ceri-m1-test-2017&amp;utm_campaign=Badge_Grade)
+
 ## Resources
 
 ### TP
