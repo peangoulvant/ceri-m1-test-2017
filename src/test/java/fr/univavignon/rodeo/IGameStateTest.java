@@ -17,7 +17,7 @@ public class IGameStateTest {
 	protected ISpecie specie1, specie2;
 	protected IAnimal animal; 
 	
-	//on considère une progression en pourcentage par tranche de 10
+	//on considere une progression en pourcentage par tranche de 10
 	protected int listPercentage[] = { 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100}; 
 
 	@Before
@@ -42,7 +42,8 @@ public class IGameStateTest {
 		//----------------- getSpecieLevel --------------------\\
 		Mockito.when(gameState.getSpecieLevel(null)).thenThrow(new IllegalArgumentException());
 		specie1 = Mockito.mock(ISpecie.class);
-		specie2 = Mockito.mock(ISpecie.class);
+		//specie2 = Mockito.mock(ISpecie.class);
+		Mockito.doThrow(new IllegalArgumentException()).when(gameState).getSpecieLevel(specie1);
 		
 		//----------------- ExploreArea --------------------\\
 		Mockito.doThrow(new IllegalStateException()).when(gameState).exploreArea();
@@ -62,20 +63,20 @@ public class IGameStateTest {
 		}
 	}
 
-	@Test
-	public void testGetSpecieLevelNull() throws IllegalArgumentException{
+	@Test(expected = IllegalArgumentException.class)
+	public void testGetSpecieLevelNull(){
 		//assertEquals("GetSpecieLevelNull -- OK", gameState.getSpecieLevel(species), null);
 		gameState.getSpecieLevel(null);
 	}
 
-	@Test
-	public void testExploreAreaNull() throws IllegalStateException {
+	@Test(expected = IllegalStateException.class)
+	public void testExploreAreaNull(){
 		//assertEquals("ExploreAreaNull -- OK", gameState.exploreArea(), null);
 		gameState.exploreArea();
 	}
 
-	@Test
-	public void testCatchAnimalNull() throws IllegalArgumentException, IllegalStateException {
+	@Test(expected = IllegalArgumentException.class)
+	public void testCatchAnimalNull(){
 		gameState.catchAnimal(null);
 	}
 
