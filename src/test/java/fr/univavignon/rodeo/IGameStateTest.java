@@ -51,7 +51,7 @@ public class IGameStateTest {
 		
 		//----------------- CatchAnimal --------------------\\
 		animal = Mockito.mock(IAnimal.class);
-		Mockito.doThrow(new IllegalArgumentException()).when(gameState).catchAnimal(animal);
+		Mockito.doThrow(new IllegalArgumentException()).when(gameState).catchAnimal(null);
 		Mockito.doThrow(new IllegalStateException()).when(gameState).catchAnimal(animal);
 	}
 	
@@ -77,6 +77,11 @@ public class IGameStateTest {
 
 	@Test(expected = IllegalArgumentException.class)
 	public void testCatchAnimalNull(){
+		gameState.catchAnimal(null);
+	}
+	
+	@Test(expected = IllegalStateException.class)
+	public void testCatchAnimal(){
 		gameState.catchAnimal(null);
 	}
 
