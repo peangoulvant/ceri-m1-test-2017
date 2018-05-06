@@ -63,8 +63,9 @@ public class IGameStateTest {
 	}
 
 	@Test
-	public void testGetSpecieLevelNull(ISpecie species) throws IllegalArgumentException{
-		assertEquals("GetSpecieLevelNull -- OK", gameState.getSpecieLevel(species), null);
+	public void testGetSpecieLevelNull() throws IllegalArgumentException{
+		//assertEquals("GetSpecieLevelNull -- OK", gameState.getSpecieLevel(species), null);
+		gameState.getSpecieLevel(null);
 	}
 
 	@Test

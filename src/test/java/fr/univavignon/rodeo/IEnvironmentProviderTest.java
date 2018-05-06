@@ -52,7 +52,7 @@ public class IEnvironmentProviderTest {
 	}
 
 	@Test
-	public void testGetEnvironment(String name) throws IllegalArgumentException {
+	public void testGetEnvironment() throws IllegalArgumentException {
 		assertEquals("GetEnvironment -- OK", envProv.getEnvironment("ice"), env);
 	}
 

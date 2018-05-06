@@ -44,19 +44,19 @@ public class IAnimalTest {
 	@Test
 	public void testIsSecret() {
 		assertTrue("animal is secret", animal.isSecret());
-		assertFalse("animal isn't secret", animal.isSecret());
+		//assertFalse("animal isn't secret", animal.isSecret());
 	}
 
 	@Test
 	public void testIsEndangered() {
 		assertTrue("animal is endangered", animal.isSecret());
-		assertFalse("animal isn't endangered", animal.isSecret());
+		//assertFalse("animal isn't endangered", animal.isSecret());
 	}
 
 	@Test
 	public void testIsBoss() {
 		assertTrue("animal is the boss", animal.isBoss());
-		assertTrue("animal isn't the boss", animal.isBoss());
+		//assertFalse("animal isn't the boss", animal.isBoss());
 	}
 
 }
