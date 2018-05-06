@@ -1,5 +1,7 @@
 # ceri-m2-test
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2572749b674747fd9051b604f42ba906)](https://app.codacy.com/app/peangoulvant/ceri-m1-test-2017?utm_source=github.com&utm_medium=referral&utm_content=peangoulvant/ceri-m1-test-2017&utm_campaign=badger)
+
 ## Resources
 
 ### TP
