@@ -82,7 +82,7 @@ public class IGameStateTest {
 	
 	@Test(expected = IllegalStateException.class)
 	public void testCatchAnimal(){
-		gameState.catchAnimal(null);
+		gameState.catchAnimal(animal);
 	}
 
 }

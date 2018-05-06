@@ -35,12 +35,12 @@ public class IGameStateProviderTest {
 	}	
 	
 	@Test
-	public void testGetGameStateProvider() throws IllegalArgumentException{
+	public void testGetGameStateProvider(){
 		assertEquals("getGameStateProvider -- OK", gameStateProvider.get("testName"), gameState);
 	}
 
-	@Test
-	public void testGetGameStateProviderNull() throws IllegalArgumentException{
+	@Test(expected = IllegalArgumentException.class)
+	public void testGetGameStateProviderNull(){
 		gameStateProviderNull.get(null);
 	}
 }
