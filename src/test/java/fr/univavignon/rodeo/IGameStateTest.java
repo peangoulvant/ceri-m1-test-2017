@@ -57,7 +57,6 @@ public class IGameStateTest {
 	
 	@Test
 	public void testGetProgression(){
-		//assertEquals("GetProgression -- OK", gameState.getProgression(), ???);
 		for(int oProgression : listPercentage) {
 			assertEquals("GetProgression -- OK", gameState.getProgression(), oProgression);
 		}
@@ -65,13 +64,11 @@ public class IGameStateTest {
 
 	@Test(expected = IllegalArgumentException.class)
 	public void testGetSpecieLevelNull(){
-		//assertEquals("GetSpecieLevelNull -- OK", gameState.getSpecieLevel(species), null);
 		gameState.getSpecieLevel(null);
 	}
 
 	@Test(expected = IllegalStateException.class)
 	public void testExploreAreaNull(){
-		//assertEquals("ExploreAreaNull -- OK", gameState.exploreArea(), null);
 		gameState.exploreArea();
 	}
 

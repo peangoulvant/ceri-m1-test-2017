@@ -4,11 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -16,8 +12,6 @@ import org.mockito.Mockito;
 import fr.univavignon.rodeo.api.IEnvironment;
 import fr.univavignon.rodeo.api.ISpecie;
 
-import org.mockito.junit.MockitoJUnit;
-import org.mockito.junit.MockitoRule;
 
 public class IEnvironmentTest {
 

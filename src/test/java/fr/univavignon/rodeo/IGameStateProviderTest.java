@@ -1,16 +1,10 @@
 package fr.univavignon.rodeo;
 
 import static org.junit.Assert.*;
-
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.junit.MockitoJUnit;
-import org.mockito.junit.MockitoRule;
 
 import fr.univavignon.rodeo.api.IGameState;
 import fr.univavignon.rodeo.api.IGameStateProvider;

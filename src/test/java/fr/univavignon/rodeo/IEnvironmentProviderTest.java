@@ -4,16 +4,10 @@ import static org.junit.Assert.*;
 
 import java.util.Arrays;
 import java.util.List;
-
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.junit.MockitoJUnit;
-import org.mockito.junit.MockitoRule;
 
 import fr.univavignon.rodeo.api.IEnvironment;
 import fr.univavignon.rodeo.api.IEnvironmentProvider;
