@@ -1,4 +1,4 @@
-package fr.univavignon.rodeo;
+package fr.univavignon.rodeo.api;
 
 import static org.junit.Assert.*;
 import org.junit.Before;
