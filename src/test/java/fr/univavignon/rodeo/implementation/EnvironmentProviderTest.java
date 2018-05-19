@@ -66,7 +66,7 @@ public class EnvironmentProviderTest extends IEnvironmentProviderTest {
 		//on test entre deux listes d'environnements
 		assertEquals(environments, environmentProvider.getAvailableEnvironments());
 		
-		//on cr�� une liste d'environnements diff�rente
+		//on cree une liste d'environnements differente
 		List<IEnvironment> env = Arrays.asList(
 				new Environment("Le jungle", 1, Arrays.asList(
 						new Specie("Singe", 1, Arrays.asList(
