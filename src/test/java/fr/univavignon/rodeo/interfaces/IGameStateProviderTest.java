@@ -23,14 +23,14 @@ public class IGameStateProviderTest {
 		gameStateProviderNull = Mockito.mock(IGameStateProvider.class);
 		
 		//----------------- get --------------------\\
-		Mockito.when(gameStateProvider.get("testName")).thenReturn(gameState);
+		Mockito.when(gameStateProvider.get("TestGameState")).thenReturn(gameState);
 		Mockito.when(gameStateProviderNull.get(null)).thenThrow(new IllegalArgumentException());
 		
 	}	
 	
 	@Test
 	public void testGetGameStateProvider(){
-		assertEquals("getGameStateProvider -- OK", gameStateProvider.get("testName"), gameState);
+		assertEquals("getGameStateProvider -- OK", gameStateProvider.get("TestGameState"), gameState);
 	}
 
 	@Test(expected = IllegalArgumentException.class)

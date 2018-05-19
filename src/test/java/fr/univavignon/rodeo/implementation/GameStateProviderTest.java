@@ -40,19 +40,13 @@ public class GameStateProviderTest extends IGameStateProviderTest{
 	}
 
 	@Test
-	public void testGet() {
+	public void testGetGameStateProvider() {
 		gameStateProvider.save(gameState);
 		assertEquals(gameState, gameStateProvider.get("TestGameState"));
 	}
 
-	@Test(expected = IllegalArgumentException.class)
-	public void getTestNull() {
-		gameStateProvider.save(null);
-		assertNull(gameStateProvider.get(null));
-	}
-
-	@Test (expected=IllegalArgumentException.class)
-	public void testGetIsNull() {
+	@Test (expected=NullPointerException.class)
+	public void testGetGameStateProviderNull() {
 		gameStateProvider.get(null);
 	}
 
