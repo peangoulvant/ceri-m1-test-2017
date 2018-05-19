@@ -11,7 +11,7 @@ public class Environment extends NamedObject implements IEnvironment {
 
 	private int areas;
 	private List<ISpecie> species;
-	
+
 	//constructor generated
 	public Environment( String name, int areas, List<ISpecie> species) {
 		super(name);
@@ -28,23 +28,15 @@ public class Environment extends NamedObject implements IEnvironment {
 	public List<ISpecie> getSpecies() {
 		return this.species;
 	}
-	
+
 	@Override
 	public boolean equals(Object o) {
-		Environment newObject = (Environment) o;
-		List<ISpecie> speciesObject = newObject.getSpecies();
-		
-		if (name.equals(newObject.getName()) && areas == newObject.getAreas() && species.size() == speciesObject.size()) {
-			for (int i=0; i < species.size(); i++) {
-				if (!((Specie)species.get(i)).equals(speciesObject.get(i)))
-					return false;
-			}
-		}
-		else {
-			return false;
-		}
-		
-		return true;
-	}
+		Environment object = (Environment) o;
+		List<ISpecie> speciesObject = object.getSpecies();
 
+		return name.equals(object.getName()) && areas == object.getAreas() && species.size() == speciesObject.size()
+				&& IntStream.range(0, species.size()).allMatch(i -> (species.get(i)).equals(speciesObject.get(i)));
+
+	}
 }
+
