@@ -31,12 +31,20 @@ public class Environment extends NamedObject implements IEnvironment {
 	
 	@Override
 	public boolean equals(Object o) {
-		Environment object = (Environment) o;
-		List<ISpecie> speciesObject = object.getSpecies();
-
-		return name.equals(object.getName()) && areas == object.getAreas() && species.size() == speciesObject.size()
-				&& IntStream.range(0, species.size()).allMatch(i -> (species.get(i)).equals(speciesObject.get(i)));
-
+		Environment newObject = (Environment) o;
+		List<ISpecie> speciesObject = newObject.getSpecies();
+		
+		if (name.equals(newObject.getName()) && areas == newObject.getAreas() && species.size() == speciesObject.size()) {
+			for (int i=0; i < species.size(); i++) {
+				if (!((Specie)species.get(i)).equals(speciesObject.get(i)))
+					return false;
+			}
+		}
+		else {
+			return false;
+		}
+		
+		return true;
 	}
 
 }
