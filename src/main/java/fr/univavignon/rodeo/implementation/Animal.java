@@ -35,5 +35,13 @@ public class Animal extends NamedObject implements IAnimal {
 	public boolean isBoss() {
 		return this.IsBoss;
 	}
+	
+	@Override
+	public boolean equals(Object o) {
+		Animal object = (Animal) o;
+
+        return name.equals(object.getName()) && (xp == object.getXP()) && (IsSecret == object.isSecret())
+                && (IsBoss == object.isBoss()) && (IsEndangered == object.isEndangered());
+	}
 
 }

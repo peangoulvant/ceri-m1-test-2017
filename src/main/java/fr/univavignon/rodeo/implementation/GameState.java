@@ -41,5 +41,11 @@ public class GameState extends NamedObject implements IGameState {
 	public int getProgression() {
 		return this.progression;
 	}
+	
+	@Override
+	public boolean equals(Object o) {
+		GameState object = (GameState) o;
+		return (progression == object.getProgression());
+	}
 
 }

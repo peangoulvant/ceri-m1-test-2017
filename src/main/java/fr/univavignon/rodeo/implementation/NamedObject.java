@@ -4,7 +4,7 @@ import fr.univavignon.rodeo.api.INamedObject;
 
 public class NamedObject implements INamedObject {
 
-	private String name;
+	protected String name;
 	
 	//constructor generated
 	public NamedObject(String name) {

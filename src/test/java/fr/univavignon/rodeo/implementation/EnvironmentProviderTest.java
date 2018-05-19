@@ -89,11 +89,6 @@ public class EnvironmentProviderTest extends IEnvironmentProviderTest {
 	}
 	
 	@Test
-	public void testGetEnvironment() {
-		assertEquals(environments.get(0), environmentProvider.getEnvironment("La Savane"));
-	}
-	
-	@Test
 	public void testGetEnvironmentNull() {
 		assertEquals(null, environmentProvider.getEnvironment("null"));
 	}

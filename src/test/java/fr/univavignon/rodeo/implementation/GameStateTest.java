@@ -48,10 +48,10 @@ public class GameStateTest extends IGameStateTest{
 		assertEquals(null, gameState.getSpecieLevel(specie));
 	}
 	
-	@Test (expected=IllegalArgumentException.class)
-    public void testGetSpecieLevelNull() {
+	@Test(expected = IllegalArgumentException.class)
+	public void testGetSpecieLevelNull(){
 		gameState.getSpecieLevel(null);
-    }
+	}
 	
 //	@Test
 //    public void testGetProgression() {
