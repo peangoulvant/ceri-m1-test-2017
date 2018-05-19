@@ -30,14 +30,18 @@ public class EnvironmentProvider implements IEnvironmentProvider {
 
 	@Override
 	public IEnvironment getEnvironment(String name) throws IllegalArgumentException {
-		//a partir du nom, on retourne l'environnement specifie
-		IEnvironment envR = null;
-		for (IEnvironment env : envs) {
-			if(env.getName().equals(name))
-				envR = env;
+		
+		if(name == null) {
+			throw new IllegalArgumentException();
 		}
-		return envR;
+		else {
+			//a partir du nom, on retourne l'environnement specifie
+			IEnvironment envR = null;
+			for (IEnvironment env : envs) {
+				if(env.getName().equals(name))
+					envR = env;
+			}
+			return envR;
+		}	
 	}
-	
-
 }

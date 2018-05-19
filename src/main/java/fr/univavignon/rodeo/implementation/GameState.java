@@ -34,7 +34,12 @@ public class GameState extends NamedObject implements IGameState {
 
 	@Override
 	public SpecieLevel getSpecieLevel(ISpecie specie) throws IllegalArgumentException {
-		return this.lvl;
+		
+		if(specie == null) {
+			throw new IllegalArgumentException();
+		}
+		else
+			return this.lvl;
 	}
 
 	@Override

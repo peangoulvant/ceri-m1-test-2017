@@ -23,18 +23,23 @@ public class GameStateProvider implements IGameStateProvider {
 	@Override
 	public IGameState get(String name) throws IllegalArgumentException {
 		
-		IGameState game = null;
-		
-		for (IGameState gameState : gameStates) {
-			if(gameState.getName().equals(name))
-				game = gameState;
+		if(name == null) {
+			throw new IllegalArgumentException();
 		}
-		
-		//si non trouve, on cree un nouveau
-		if (game == null)
-			game = new GameState("NewGameState");
-		
-		return game;
+		else {
+			IGameState game = null;
+			
+			for (IGameState gameState : gameStates) {
+				if(gameState.getName().equals(name))
+					game = gameState;
+			}
+			
+			//si non trouve, on cree un nouveau
+			if (game == null)
+				game = new GameState("NewGameState");
+			
+			return game;
+		}
 	}
 
 }
