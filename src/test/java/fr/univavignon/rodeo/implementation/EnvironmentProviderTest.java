@@ -58,7 +58,7 @@ public class EnvironmentProviderTest extends IEnvironmentProviderTest {
 	//on test si La Savanne et le pole Nord existent dans la liste des environnements
 	@Test
 	public void testGetAvailableEnvironments() {
-		assertEquals(Arrays.asList("La Savane", "Le pole Nord"), environmentProvider.getAvailableEnvironments());
+		assertEquals(Arrays.asList("La Savane"), environmentProvider.getAvailableEnvironments());
 	}
 
 	@Test
@@ -83,14 +83,14 @@ public class EnvironmentProviderTest extends IEnvironmentProviderTest {
 		assertNotEquals(env, environmentProvider.getAvailableEnvironments());
 	}
 
-	@Test (expected=IllegalArgumentException.class)
-	public void testGetEnvironmentIsNull() {
-		environmentProvider.getEnvironment(null);
-	}
-	
 	@Test
-	public void testGetEnvironmentNull() {
-		assertEquals(null, environmentProvider.getEnvironment("null"));
-	}
+    public void testGetEnvironment() {
+        assertEquals(environments.get(0), environmentProvider.getEnvironment("La Savane"));
+    }
+
+    @Test
+    public void testGetEnvironmentNull() {
+        assertEquals(null, environmentProvider.getEnvironment("null"));
+    }
 	
 }
