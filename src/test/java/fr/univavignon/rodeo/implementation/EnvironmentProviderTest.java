@@ -33,7 +33,7 @@ public class EnvironmentProviderTest extends IEnvironmentProviderTest {
 								)),
 						new Specie("Elephants", 1, Arrays.asList(
 								new Animal("Elephant d'Afrique", 0, false, false, false), 	//normal
-								new Animal("Elephant Arc-en-ciel", 30, false, false, true) 	//boss
+								new Animal("Elephant ArcEnCiel", 30, false, false, true) 	//boss
 								)),
 						new Specie("Lions", 5, Arrays.asList(
 								new Animal("Lion de la Savane", 1, false, false, false), 	//normal

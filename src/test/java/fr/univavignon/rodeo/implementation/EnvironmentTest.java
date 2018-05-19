@@ -32,7 +32,7 @@ public class EnvironmentTest extends IEnvironmentTest {
 						)),
 				new Specie("Elephants", 1, Arrays.asList(
 						new Animal("Elephant d'Afrique", 0, false, false, false), 	//normal
-						new Animal("Elephant Arc-en-ciel", 30, false, false, true) 	//boss
+						new Animal("Elephant ArcEnCiel", 30, false, false, true) 	//boss
 						)),
 				new Specie("Lions", 5, Arrays.asList(
 						new Animal("Lion de la Savane", 1, false, false, false), 	//normal
@@ -69,7 +69,7 @@ public class EnvironmentTest extends IEnvironmentTest {
 						)),
 				new Specie("Elephants", 1, Arrays.asList(
 						new Animal("Elephant d'Afrique", 0, false, false, false), 	//normal
-						new Animal("Elephant Arc-en-ciel", 30, false, false, true) 	//boss
+						new Animal("Elephant ArcEnCiel", 30, false, false, true) 	//boss
 						)),
 				new Specie("Lions", 5, Arrays.asList(
 						new Animal("Lion de la Savane", 1, false, false, false), 	//normal
@@ -98,7 +98,7 @@ public class EnvironmentTest extends IEnvironmentTest {
 						)),
 				new Specie("Elephants", 1, Arrays.asList(
 						new Animal("Elephant d'Afrique", 0, false, false, false), 	//normal
-						new Animal("Elephant Arc-en-ciel", 30, false, false, true) 	//boss
+						new Animal("Elephant ArcEnCiel", 30, false, false, true) 	//boss
 						)),
 				new Specie("Lions", 5, Arrays.asList(
 						new Animal("Lion de la Savane", 1, false, false, false), 	//normal
@@ -123,7 +123,7 @@ public class EnvironmentTest extends IEnvironmentTest {
 				new Specie("Zebre", 1, Arrays.asList(
 						new Animal("Zebre Blanc", 0, false, false, false),			//normal
 						new Animal("Zebre Raye", 25, true, false, false),			//secret
-						new Animal("Zebre Arc-en-Ciel", 30, false, true, false)		//endangered
+						new Animal("Zebre ArcEnCiel", 30, false, true, false)		//endangered
 						)),
 				new Specie("Elephants", 1, Arrays.asList(
 						new Animal("Elephant d'Afrique", 0, false, false, false), 	//normal
