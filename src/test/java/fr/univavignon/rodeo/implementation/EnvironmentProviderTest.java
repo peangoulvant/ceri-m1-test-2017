@@ -23,12 +23,12 @@ public class EnvironmentProviderTest extends IEnvironmentProviderTest {
 				new Environment("La savane", 1, Arrays.asList(
 						new Specie("Buffalo", 1, Arrays.asList(
 								new Animal("Buffalo Blanc", 1, false, false, false), 		//normal
-								new Animal("Buffalo Sacré", 3, true, false, false), 		//secret
+								new Animal("Buffalo Sacre", 3, true, false, false), 		//secret
 								new Animal("Buffalo Rouge", 30, false, true, false) 		//endangered
 								)),
 						new Specie("Zebre", 1, Arrays.asList(
 								new Animal("Zebre Blanc", 0, false, false, false),			//normal
-								new Animal("Zebre Rayé", 25, true, false, false),			//secret
+								new Animal("Zebre Raye", 25, true, false, false),			//secret
 								new Animal("Zebre Rouge Sang", 30, false, true, false)		//endangered
 								)),
 						new Specie("Elephants", 1, Arrays.asList(
@@ -37,14 +37,14 @@ public class EnvironmentProviderTest extends IEnvironmentProviderTest {
 								)),
 						new Specie("Lions", 5, Arrays.asList(
 								new Animal("Lion de la Savane", 1, false, false, false), 	//normal
-								new Animal("Le Lion de Némée", 5, true, false, false), 		//secret
+								new Animal("Le Lion de Nemee", 5, true, false, false), 		//secret
 								new Animal("Le Lion furax", 30, false, true, false) 		//endangered
 								))
 						)),
-				new Environment("Le pôle Nord", 1, Arrays.asList(
+				new Environment("Le pole Nord", 1, Arrays.asList(
 						new Specie("Ours", 1, Arrays.asList(
 								new Animal("Ours polaire", 1, false, false, false), 		//normal
-								new Animal("Ours givré", 3, true, false, false) 		//secret
+								new Animal("Ours givre", 3, true, false, false) 		//secret
 								)),
 						new Specie("Loups", 1, Arrays.asList(
 								new Animal("Loup arctique", 1, false, false, false), 		//normal
@@ -66,7 +66,7 @@ public class EnvironmentProviderTest extends IEnvironmentProviderTest {
 		//on test entre deux listes d'environnements
 		assertEquals(environments, environmentProvider.getAvailableEnvironments());
 		
-		//on créé une liste d'environnements différente
+		//on crï¿½ï¿½ une liste d'environnements diffï¿½rente
 		List<IEnvironment> env = Arrays.asList(
 				new Environment("Le jungle", 1, Arrays.asList(
 						new Specie("Singe", 1, Arrays.asList(
@@ -75,7 +75,7 @@ public class EnvironmentProviderTest extends IEnvironmentProviderTest {
 								)),
 						new Specie("Lion", 1, Arrays.asList(
 								new Animal("Lion de la Savane", 1, false, false, false), 	//normal
-								new Animal("Le Lion de Némée", 1, true, false, false) 		//secret
+								new Animal("Le Lion de Nemee", 1, true, false, false) 		//secret
 								))
 						)
 						)

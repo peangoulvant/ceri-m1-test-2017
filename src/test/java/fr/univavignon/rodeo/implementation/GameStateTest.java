@@ -20,10 +20,10 @@ public class GameStateTest extends IGameStateTest{
 	@Before
 	public void init() {
 		gameState = new GameState("TestGameState");
-		animal = new Animal("Gorille enragé", 30, true, true, true);
+		animal = new Animal("Gorille enrage", 30, true, true, true);
 		specie = new Specie("Buffalo", 1, Arrays.asList(
 				new Animal("Buffalo Blanc", 1, false, false, false), 		//normal
-				new Animal("Buffalo Sacré", 3, true, false, false), 		//secret
+				new Animal("Buffalo Sacre", 3, true, false, false), 		//secret
 				new Animal("Buffalo Rouge", 30, false, true, false) 		//endangered
 				));
 	}
@@ -40,7 +40,7 @@ public class GameStateTest extends IGameStateTest{
 	
 	@Test (expected=IllegalStateException.class)
 	public void testCatchAnimalIsNotExist() {
-		gameState.catchAnimal(new Animal("Le bison futé", 1, false, false, false));
+		gameState.catchAnimal(new Animal("Le bison fute", 1, false, false, false));
 	}
 	
 	@Test
