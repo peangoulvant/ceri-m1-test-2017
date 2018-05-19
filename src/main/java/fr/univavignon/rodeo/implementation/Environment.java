@@ -16,8 +16,7 @@ public class Environment extends NamedObject implements IEnvironment {
 	public Environment( String name, int areas, List<ISpecie> species) {
 		super(name);
 		this.areas = areas;
-		this.species = new LinkedList<ISpecie>();
-		this.species.addAll(species);
+		this.species = species;
 	}
 
 	@Override

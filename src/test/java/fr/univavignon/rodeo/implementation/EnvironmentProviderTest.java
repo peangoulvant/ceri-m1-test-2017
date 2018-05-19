@@ -72,13 +72,8 @@ public class EnvironmentProviderTest extends IEnvironmentProviderTest {
 						new Specie("Singe", 1, Arrays.asList(
 								new Animal("Gorille", 1, false, false, false), 		//normal
 								new Animal("Bonobo", 1, true, false, false) 		//secret
-								)),
-						new Specie("Lion", 1, Arrays.asList(
-								new Animal("Lion de la Savane", 1, false, false, false), 	//normal
-								new Animal("Le Lion de Nemee", 1, true, false, false) 		//secret
 								))
-						)
-						)
+						))
 				);
 		assertNotEquals(env, environmentProvider.getAvailableEnvironments());
 	}
