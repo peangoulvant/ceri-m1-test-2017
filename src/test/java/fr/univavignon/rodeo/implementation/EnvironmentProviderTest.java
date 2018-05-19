@@ -55,10 +55,10 @@ public class EnvironmentProviderTest extends IEnvironmentProviderTest {
 		environmentProvider = new EnvironmentProvider(environments);
 	}
 
-	//on test si La Savanne existe dans la liste des environnements
+	//on test si La Savanne et le pole Nord existent dans la liste des environnements
 	@Test
 	public void testGetAvailableEnvironments() {
-		assertEquals(Arrays.asList("La Savane"), environmentProvider.getAvailableEnvironments());
+		assertEquals(Arrays.asList("La Savane", "Le pole Nord"), environmentProvider.getAvailableEnvironments());
 	}
 
 	@Test
@@ -68,7 +68,7 @@ public class EnvironmentProviderTest extends IEnvironmentProviderTest {
 		
 		//on cree une liste d'environnements differente
 		List<IEnvironment> env = Arrays.asList(
-				new Environment("Le jungle", 1, Arrays.asList(
+				new Environment("La jungle", 1, Arrays.asList(
 						new Specie("Singe", 1, Arrays.asList(
 								new Animal("Gorille", 1, false, false, false), 		//normal
 								new Animal("Bonobo", 1, true, false, false) 		//secret
