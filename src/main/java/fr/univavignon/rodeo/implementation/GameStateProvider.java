@@ -30,7 +30,7 @@ public class GameStateProvider implements IGameStateProvider {
 				game = gameState;
 		}
 		
-		//si non trouvé, on crée un nouveau
+		//si non trouve, on cree un nouveau
 		if (game == null)
 			game = new GameState("NewGameState");
 		
