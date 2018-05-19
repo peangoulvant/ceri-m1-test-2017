@@ -8,7 +8,7 @@ public class Animal extends NamedObject implements IAnimal {
 	private int xp;
 	
 	//constructor generated
-	public Animal(boolean isBoss, boolean isEndangered, boolean isSecret, String name, int xp) {
+	public Animal(String name, int xp, boolean isBoss, boolean isEndangered, boolean isSecret) {
 		super(name);
 		IsBoss = isBoss;
 		IsEndangered = isEndangered;

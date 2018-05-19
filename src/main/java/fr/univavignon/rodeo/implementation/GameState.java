@@ -1,5 +1,7 @@
 package fr.univavignon.rodeo.implementation;
 
+import org.junit.experimental.theories.internal.SpecificDataPointsSupplier;
+
 import fr.univavignon.rodeo.api.IAnimal;
 import fr.univavignon.rodeo.api.IGameState;
 import fr.univavignon.rodeo.api.ISpecie;

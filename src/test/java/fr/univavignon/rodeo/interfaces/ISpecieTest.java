@@ -1,4 +1,4 @@
-package fr.univavignon.rodeo.api;
+package fr.univavignon.rodeo.interfaces;
 
 import static org.junit.Assert.*;
 

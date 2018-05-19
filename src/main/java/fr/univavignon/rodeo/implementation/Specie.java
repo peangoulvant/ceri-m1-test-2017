@@ -11,7 +11,7 @@ public class Specie extends NamedObject implements ISpecie {
 	private List<IAnimal> animals;
 	private int area;
 	
-	public Specie(int area, List<IAnimal> list, String name) {
+	public Specie( String name, int area, List<IAnimal> list) {
 		super(name);
 		this.animals = new LinkedList<IAnimal>();
 		this.animals.addAll(list);

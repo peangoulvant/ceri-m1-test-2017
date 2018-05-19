@@ -8,10 +8,10 @@ import fr.univavignon.rodeo.api.IEnvironmentProvider;
 
 public class EnvironmentProvider implements IEnvironmentProvider {
 
-	private LinkedList<IEnvironment> envs;
+	private List<IEnvironment> envs;
 	
 	//constructor generated	
-	public EnvironmentProvider(LinkedList<IEnvironment> envs) {
+	public EnvironmentProvider(List<IEnvironment> envs) {
 		super();
 		this.envs = new LinkedList<IEnvironment>();
 		this.envs = envs;

@@ -12,7 +12,7 @@ public class Environment extends NamedObject implements IEnvironment {
 	private List<ISpecie> species;
 	
 	//constructor generated
-	public Environment(int areas, List<ISpecie> species, String name) {
+	public Environment( String name, int areas, List<ISpecie> species) {
 		super(name);
 		this.areas = areas;
 		this.species = new LinkedList<ISpecie>();
