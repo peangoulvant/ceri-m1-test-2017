@@ -20,7 +20,7 @@ public class EnvironmentProviderTest extends IEnvironmentProviderTest {
 	@Before
 	public void init() {
 		environments = Arrays.asList(
-				new Environment("La savane", 1, Arrays.asList(
+				new Environment("La Savane", 1, Arrays.asList(
 						new Specie("Buffalo", 1, Arrays.asList(
 								new Animal("Buffalo Blanc", 1, false, false, false), 		//normal
 								new Animal("Buffalo Sacre", 3, true, false, false), 		//secret
@@ -52,7 +52,7 @@ public class EnvironmentProviderTest extends IEnvironmentProviderTest {
 								))
 						)
 						));
-		environmentProvider = new EnvironmentProvider(environments);
+		environmentProvider = new EnvironmentProvider();
 	}
 
 	//on test si La Savanne et le pole Nord existent dans la liste des environnements
