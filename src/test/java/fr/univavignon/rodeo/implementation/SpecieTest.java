@@ -21,7 +21,7 @@ public class SpecieTest extends ISpecieTest{
     public void init() {
         animals = Arrays.asList(
         		new Animal("Buffalo Blanc", 1, false, false, false), 		//normal
-				new Animal("Buffalo Sacré", 3, true, false, false), 		//secret
+				new Animal("Buffalo Sacre", 3, true, false, false), 		//secret
 				new Animal("Buffalo Rouge", 30, false, true, false) 		//endangered
         );
         specie = new Specie("Buffalo", 1, animals);
@@ -46,7 +46,7 @@ public class SpecieTest extends ISpecieTest{
     public void testEquals() {
         animalsTest = Arrays.asList(
         		new Animal("Buffalo Blanc", 1, false, false, false), 		//normal
-				new Animal("Buffalo Sacré", 3, true, false, false), 		//secret
+				new Animal("Buffalo Sacrï¿½", 3, true, false, false), 		//secret
 				new Animal("Buffalo Rouge", 30, false, true, false) 		//endangered
         );
         specieTest = new Specie("Buffalo", 1, animalsTest);
@@ -66,7 +66,7 @@ public class SpecieTest extends ISpecieTest{
     public void testNotEquals2() {
         animalsTest = Arrays.asList(
         		new Animal("Buffalo Blanc", 1, false, false, false), 		//normal
-				new Animal("Buffalo Sacré", 3, true, false, false), 		//secret
+				new Animal("Buffalo Sacrï¿½", 3, true, false, false), 		//secret
 				new Animal("Buffalo Rouge", 30, false, true, false) 		//endangered
         );
         specieTest = new Specie("Buffalo", 42, animalsTest);

@@ -22,12 +22,12 @@ public class EnvironmentTest extends IEnvironmentTest {
 		species = Arrays.asList(
 				new Specie("Buffalo", 1, Arrays.asList(
 						new Animal("Buffalo Blanc", 1, false, false, false), 		//normal
-						new Animal("Buffalo Sacré", 3, true, false, false), 		//secret
+						new Animal("Buffalo Sacre", 3, true, false, false), 		//secret
 						new Animal("Buffalo Rouge", 30, false, true, false) 		//endangered
 						)),
 				new Specie("Zebre", 1, Arrays.asList(
 						new Animal("Zebre Blanc", 0, false, false, false),			//normal
-						new Animal("Zebre Rayé", 25, true, false, false),			//secret
+						new Animal("Zebre Raye", 25, true, false, false),			//secret
 						new Animal("Zebre Rouge Sang", 30, false, true, false)		//endangered
 						)),
 				new Specie("Elephants", 1, Arrays.asList(
@@ -36,7 +36,7 @@ public class EnvironmentTest extends IEnvironmentTest {
 						)),
 				new Specie("Lions", 5, Arrays.asList(
 						new Animal("Lion de la Savane", 1, false, false, false), 	//normal
-						new Animal("Le Lion de Némée", 5, true, false, false), 		//secret
+						new Animal("Le Lion de Nemee", 5, true, false, false), 		//secret
 						new Animal("Le Lion furax", 30, false, true, false) 		//endangered
 						))
 				);
@@ -59,12 +59,12 @@ public class EnvironmentTest extends IEnvironmentTest {
 		speciesTest = Arrays.asList(
 				new Specie("Buffalo", 1, Arrays.asList(
 						new Animal("Buffalo Blanc", 1, false, false, false), 		//normal
-						new Animal("Buffalo Sacré", 3, true, false, false), 		//secret
+						new Animal("Buffalo Sacre", 3, true, false, false), 		//secret
 						new Animal("Buffalo Rouge", 30, false, true, false) 		//endangered
 						)),
 				new Specie("Zebre", 1, Arrays.asList(
 						new Animal("Zebre Blanc", 0, false, false, false),			//normal
-						new Animal("Zebre Rayé", 25, true, false, false),			//secret
+						new Animal("Zebre Raye", 25, true, false, false),			//secret
 						new Animal("Zebre Rouge Sang", 30, false, true, false)		//endangered
 						)),
 				new Specie("Elephants", 1, Arrays.asList(
@@ -73,7 +73,7 @@ public class EnvironmentTest extends IEnvironmentTest {
 						)),
 				new Specie("Lions", 5, Arrays.asList(
 						new Animal("Lion de la Savane", 1, false, false, false), 	//normal
-						new Animal("Le Lion de Némée", 5, true, false, false), 		//secret
+						new Animal("Le Lion de Nemee", 5, true, false, false), 		//secret
 						new Animal("Le Lion furax", 30, false, true, false) 		//endangered
 						))
 				);
@@ -88,12 +88,12 @@ public class EnvironmentTest extends IEnvironmentTest {
 		speciesTest = Arrays.asList(
 				new Specie("Buffalo", 1, Arrays.asList(
 						new Animal("Buffalo Blanc", 1, false, false, false), 		//normal
-						new Animal("Buffalo Sacré", 3, true, false, false), 		//secret
+						new Animal("Buffalo Sacre", 3, true, false, false), 		//secret
 						new Animal("Buffalo Rouge", 30, false, true, false) 		//endangered
 						)),
 				new Specie("Zebre", 1, Arrays.asList(
 						new Animal("Zebre Blanc", 0, false, false, false),			//normal
-						new Animal("Zebre Rayé", 25, true, false, false),			//secret
+						new Animal("Zebre Raye", 25, true, false, false),			//secret
 						new Animal("Zebre Rouge Sang", 30, false, true, false)		//endangered
 						)),
 				new Specie("Elephants", 1, Arrays.asList(
@@ -102,7 +102,7 @@ public class EnvironmentTest extends IEnvironmentTest {
 						)),
 				new Specie("Lions", 5, Arrays.asList(
 						new Animal("Lion de la Savane", 1, false, false, false), 	//normal
-						new Animal("Le Lion de Némée", 5, true, false, false), 		//secret
+						new Animal("Le Lion de Nemee", 5, true, false, false), 		//secret
 						new Animal("Le Lion furax", 30, false, true, false) 		//endangered
 						))
 				);
@@ -111,18 +111,18 @@ public class EnvironmentTest extends IEnvironmentTest {
 		assertNotEquals(environment, environmentTest);
 	}
 
-	//Ici on change quelques animaux pour le même environment
+	//Ici on change quelques animaux pour le mï¿½me environment
 	@Test
 	public void testNotEquals2() {
 		speciesTest = Arrays.asList(
 				new Specie("Buffalo", 1, Arrays.asList(
 						new Animal("Buffalo Blanc", 1, false, false, false), 		//normal
-						new Animal("Buffalo Sacré", 3, true, false, false), 		//secret
-						new Animal("Buffalo d'Amérique", 30, false, true, false) 		//endangered
+						new Animal("Buffalo Sacre", 3, true, false, false), 		//secret
+						new Animal("Buffalo d'Amerique", 30, false, true, false) 		//endangered
 						)),
 				new Specie("Zebre", 1, Arrays.asList(
 						new Animal("Zebre Blanc", 0, false, false, false),			//normal
-						new Animal("Zebre Rayé", 25, true, false, false),			//secret
+						new Animal("Zebre Raye", 25, true, false, false),			//secret
 						new Animal("Zebre Arc-en-Ciel", 30, false, true, false)		//endangered
 						)),
 				new Specie("Elephants", 1, Arrays.asList(
@@ -140,18 +140,18 @@ public class EnvironmentTest extends IEnvironmentTest {
 		assertNotEquals(environment, environmentTest);
 	}
 	
-	//Ici deux animaux pour le même environment
+	//Ici deux animaux pour le mï¿½me environment
 		@Test
 		public void testNotEquals3() {
 			speciesTest = Arrays.asList(
 					new Specie("Buffalo", 1, Arrays.asList(
 							new Animal("Buffalo Blanc", 1, false, false, false), 		//normal
-							new Animal("Buffalo Sacré", 3, true, false, false), 		//secret
+							new Animal("Buffalo Sacre", 3, true, false, false), 		//secret
 							new Animal("Buffalo Rouge", 30, false, true, false) 		//endangered
 							)),
 					new Specie("Zebre", 1, Arrays.asList(
 							new Animal("Zebre Blanc", 0, false, false, false),			//normal
-							new Animal("Zebre Rayé", 25, true, false, false),			//secret
+							new Animal("Zebre Raye", 25, true, false, false),			//secret
 							new Animal("Zebre Rouge Sang", 30, false, true, false)		//endangered
 							))
 					);
