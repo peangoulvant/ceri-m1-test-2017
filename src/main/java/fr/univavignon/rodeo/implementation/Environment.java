@@ -3,7 +3,7 @@ package fr.univavignon.rodeo.implementation;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.IntStream;
-
+import java.lang.*;
 import fr.univavignon.rodeo.api.IEnvironment;
 import fr.univavignon.rodeo.api.ISpecie;
 
@@ -15,7 +15,7 @@ public class Environment extends NamedObject implements IEnvironment {
 	//constructor generated
 	public Environment( String name, int areas, List<ISpecie> species) {
 		super();
-		super(name);
+		//super(name);
 		this.areas = areas;
 		this.species = species;
 	}
