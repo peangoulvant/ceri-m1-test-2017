@@ -14,7 +14,7 @@ public class Environment extends NamedObject implements IEnvironment {
 
 	//constructor generated
 	public Environment( String name, int areas, List<ISpecie> species) {
-		super();
+		super(NamedObject);
 		//super(name);
 		this.areas = areas;
 		this.species = species;
