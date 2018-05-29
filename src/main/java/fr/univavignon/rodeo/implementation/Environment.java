@@ -30,7 +30,7 @@ public class Environment extends NamedObject implements IEnvironment {
 	}
 
 	@Override
-	public boolean equals(Environment o) {
+	public boolean equals(Object o) {
 		Environment object = o;
 		List<ISpecie> speciesObject = object.getSpecies();
 
